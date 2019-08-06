@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="style.css">
+
+    <meta charset="utf-8">
+    <title>night sky</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  </head>
+  <body>
+    <div id="sundown"></div>
+    <div id="sunup"></div>
+    <div id="star">
+      <div class="star1"></div>
+      <div class="star2"></div>
+      <div class="star3"></div>
+    </div>
+    <button onClick="click();">둥근해가 떴습니다</button>
+    <span></span>
+  <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+          $("#sundown").fadeOut();
+          $("span").fadeIn();
+          $("span").animate({top:'140px'});
+          $("#sunup").fadeIn();
+          $("#star").fadeOut();
+      });
+    });
+
+    </script>
+  </body>
+</html>
